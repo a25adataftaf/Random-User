@@ -1,17 +1,3 @@
-document.getElementById("actualitzar").addEventListener("click", function() {
-    fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-        document.getElementById("bitcoin").innerHTML = data.bpi.EUR.rate + " €"
-    })
-    .catch(error => {
-        console.error('Error obteniendo la cotización del Bitcoin:', error)
-        document.getElementById("bitcoin").innerHTML = "Error cargando datos"
-    })
-})
-
-
 document.getElementById("novaBroma").addEventListener("click", function() {
     fetch('https://api.chucknorris.io/jokes/random')
     .then(response => response.json())
